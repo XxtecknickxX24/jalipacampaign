@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection on Data Privacy and Cyber Awareness</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #51e2f5;
+            color: #333;
+        }
+        h1 {
+            color: #F53473;
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(30, 30, 30, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border: 2px solid #00bcd4;
+            position: relative;
+        }
+       
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 10px;
+            background: rgba(0, 188, 212, 0.5);
+            z-index: -1;
+            filter: blur(10px);
+        }
+       
+        #reflection-content p {
+            text-indent: 30px;
+            margin-top: 10px;  
+        }
+    </style>
+</head>
+<body>
+ 
+<div class="container">
+    <h1>Reflection on Data Privacy and Cyber Awareness</h1>
+    <div id="reflection-content"></div>
+</div>
+ 
+<py-script>
+    reflection_text = """As I am listening to the campaign it really opens me up to the fact on how data privacy works in the right way. In my life the data privacy is only a simple thing because it's normal for facebook or instagram to know a little about you because they always inform us about the data privacy act. The one that left me the impression it the sensitivity of Personal Information, the sensitivity varies for me but the real sensitivity is based on what is the level of information that could really change a thing in just knowing that information. For example, in the past on what happened to Japan, the US has an atomic bomb that no one knows and it is a high level information since it could damage the world or a person's life when it would go to a bad user or person. 
+
+   Also from the campaign I have also have similarity on what they share on the right way to secure information like for example posting in later date since from the presentation they show a girl who has a mafia boyfriend just got killed after she post the picture on where she is and the mafia boyfriend knows it and killed her. Another one is keeping a private life and not posting everyday since for me it could also see the sign on who you are like personality and attitude since anyone can know what that person is expressing and it may conclude to be his/her personality or attitude. Also I have learn something new in this campaign other than knowing the others and that it using same password, I know it is relatively obvious but for a person who has short term memory on password it would be hard to do it but he/she can write in on a paper or notebook just don’t lost it since it is very important. With the increasing in using of technologies and devices in this era or generation it is safe to say that there are many cyber crime that is taking place but after the presentation that I saw it shows that they really live up to the expectation to minimize the cyber crime that is happening and also It would never go to 0% because it is always there but the fact that it is decreasing means they did a really good job on fighting it and also they can be reliable when it happen to us.
+
+  The National Privacy Commission is always there to help when the time comes and is also updated to data privacy. They also follow the law and also keep information a secret from others like a top secret from what I heard. With the Republic Act 10173 or  Data Privacy Act of 2012 any law that is inside this act must be follow and all the crimes and illegal activities must be punish on what is written in the law to protect the community, the people, the city, and its safety, Without this law it would be dangerous to do anything on internet since the freedom of using it is vast and can be deadly on everyone. Just like in the presentation “Treat it as someone not something because they can hear, speak,feel and think”."""
+ 
+    from pyscript import Element
+ 
+    reflection_element = Element('reflection-content')
+   
+    formatted_reflection_text = "<p>" + reflection_text.replace('\n\n', '</p><p>').replace('\n', '<br>') + "</p>"
+    reflection_element.element.innerHTML = formatted_reflection_text
+</py-script>
+ 
+</body>
+</html>
